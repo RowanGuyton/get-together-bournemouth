@@ -17,7 +17,7 @@ class EventsController extends Controller
     public function show($id) {
 
     }
-    // TODO: Implement creating new events
+
     public function create(Request $request) {
         $userId = Auth::user()->id;
 
