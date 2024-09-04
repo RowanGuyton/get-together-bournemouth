@@ -15,6 +15,7 @@ Route::get('/', function () {
     ]);
 });
 
+// TODO: Rename this to Event List or something similar
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
