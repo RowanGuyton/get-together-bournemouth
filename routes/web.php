@@ -19,6 +19,10 @@ Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+Route::get('/new-event', function () {
+    return Inertia::render('NewEvent');
+})->middleware(['auth'])->name('new-event');
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
@@ -26,5 +30,6 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::get('/events/all', [EventsController::class, 'index']);
+Route::post('/events/create', [EventsController::class, 'create']);
 
 require __DIR__.'/auth.php';
