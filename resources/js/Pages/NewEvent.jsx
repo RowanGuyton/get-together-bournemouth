@@ -119,7 +119,7 @@ export default function NewEvent({auth}) {
                             <div className="col-span-2 flex justify-end">
                                 <button
                                     type="submit"
-                                    className="px-4 py-2 bg-blue-500 text-white rounded-lg shadow-sm"
+                                    className="px-4 py-2 bg-blue-500 text-white shadow-sm"
                                 >
                                     Submit
                                 </button>
