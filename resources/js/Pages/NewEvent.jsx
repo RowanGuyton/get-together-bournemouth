@@ -63,7 +63,7 @@ export default function NewEvent({auth}) {
             <Head title="Dashboard"/>
 
             <div className="py-12">
-                <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
+                <div className="flex justify-center items-center max-w-7xl mx-auto sm:px-6 lg:px-8">
                     <div className="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
                         <form onSubmit={onSubmit} className="grid grid-cols-2 gap-6">
                             <div className="col-span-1">
