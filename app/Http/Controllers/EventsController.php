@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Event;
 use Illuminate\Support\Facades\Auth;
+use Inertia\Inertia;
 
 class EventsController extends Controller
 {
@@ -13,9 +14,12 @@ class EventsController extends Controller
         $events = Event::all();
         return response()->json($events);
     }
-    // TODO: Implement retrieving individual events
-    public function show($id) {
 
+    public function show($id) {
+        $event = Event::where('id', $id)->first();
+        return Inertia::render('Events/Show', [
+            'event' => $event
+        ]);
     }
 
     public function create(Request $request) {
