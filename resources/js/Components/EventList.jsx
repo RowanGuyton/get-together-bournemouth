@@ -36,7 +36,11 @@ export default function EventList() {
                         {eventList.length > 0 ? (
                             eventList.map((event, index) => (
                                 <tr key={index}>
-                                    <td className="border border-gray-300 px-4 py-2">{event.name}</td>
+                                    <td className="border border-gray-300 px-4 py-2">
+                                        <a href={`/events/${event.id}`} className="text-black-500">
+                                            {event.name}
+                                        </a>
+                                    </td>
                                     <td className="border border-gray-300 px-4 py-2">
                                         <a href={event.event_url} className="text-blue-500 underline">Link</a>
                                     </td>
